@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Code Galaxy - Interactive platform for learning programming languages. Explore the universe of coding with our solar system visualization featuring JavaScript, Python, HTML, CSS, C++, Java, Go, and Rust.">
+    <meta name="keywords" content="programming, coding, learn to code, JavaScript, Python, HTML, CSS, C++, Java, Go, Rust, interactive learning, web development, software engineering">
+    <meta name="author" content="Code Galaxy">
+    <meta name="theme-color" content="#0d133d">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Code Galaxy - Programming Languages Universe">
+    <meta property="og:description" content="Learn programming through an interactive solar system visualization">
+    <meta property="og:image" content="./logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Code Galaxy">
+    <meta name="twitter:description" content="Interactive platform for learning programming">
+    
+    <!-- SEO -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./logo.jpg">
+    <link rel="apple-touch-icon" href="./logo.jpg">
+    
+    <title>Code Galaxy - Learn Programming Languages Interactive</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+         <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="codegalaxy.css">
+    <link rel="stylesheet" href="stars.css">
+    
+    <!-- Scripts - deferred for performance -->
+    <script defer src="stars.js"></script>
+    <script defer src="codegalaxy.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Code Galaxy",
+        "description": "Interactive platform for learning programming languages",
+        "url": "https://yourdomain.com",
+        "logo": "https://yourdomain.com/logo.jpg"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Animated background stars -->
+    <div class="stars-container" id="starsContainer" role="presentation" aria-hidden="true"></div>
+
+    <!-- Planet Information Modal -->
+    <div id="planet-modal" 
+         role="dialog" 
+         aria-labelledby="modal-title" 
+         aria-describedby="modal-desc"
+         aria-modal="true"
+         aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <button onclick="closeModal()" 
+                    aria-label="Close planet information modal"
+                    class="button">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div class="main" role="banner">
+        <h1 class="title">
+            Welcome to the
+            <br>
+            <span>CODE</span>
+            GALAXY
+        </h1>
+        <p class="subtitle">
+            Explore the Universe of Programming Languages
+        </p>
+    </div>
+
+    <!-- Main Page Container -->
+    <div class="pagetwo">
+        
+        <!-- Header Navigation -->
+        <header class="header">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link" aria-label="Code Galaxy Home">
+                    <img src="logo.jpg" 
+                         alt="Code Galaxy Logo" 
+                         class="logo"
+                         width="60"
+                         height="60"
+                         loading="eager">
+                </a>
+                <span>
+                    <span class="code accent">CODE</span> 
+                    GALAXY
+                </span>
+            </div>
+            
+            <nav class="buttons" aria-label="Main navigation">
+                <a class="button" 
+                   href="codegalaxypagetwo.html" 
+                   role="button">
+                    Get Started
+                </a>
+                <a class="button" 
+                   href="#support" 
+                   role="button">
+                    Support
+                </a>
+                <a class="button" 
+                   href="#testimonials" 
+                   role="button">
+                    Testimonials
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Page Title -->
+            <section class="title-section">
+                <h2 id="h1">
+                    Interactive Map of Programming Languages
+                </h2>
+            </section>
+
+            <!-- Solar System Visualization -->
+            <section class="solar-system" 
+                     role="region"
+                     aria-label="Programming languages solar system">
+                
+                <!-- Sun (Center) -->
+                <div class="sun" role="presentation" aria-label="Center of the programming universe"></div>
+                
+                <!-- Orbits -->
+                <div class="orbit orbit1" role="presentation" aria-hidden="true"></div>
+                <div class="orbit orbit2" role="presentation" aria-hidden="true"></div>
+                <div class="orbit orbit3" role="presentation" aria-hidden="true"></div>
+                <div class="orbit orbit4" role="presentation" aria-hidden="true"></div>
+                <div class="orbit orbit5" role="presentation" aria-hidden="true"></div>
+                <div class="orbit orbit6" role="presentation" aria-hidden="true"></div>
+                <div class="orbit orbit7" role="presentation" aria-hidden="true"></div>
+                <div class="orbit orbit8" role="presentation" aria-hidden="true"></div>
+
+                <!-- Planets (Programming Languages) -->
+                <button class="planet planet1 pos1" 
+                        tabindex="0" 
+                        aria-label="JavaScript - The web language for interactive websites. Click for more information">
+                    <span>JavaScript</span>
+                </button>
+                
+                <button class="planet planet2 pos2" 
+                        tabindex="0" 
+                        aria-label="Python - Popular for AI, Data Science, and scripting. Click for more information">
+                    <span>Python</span>
+                </button>
+                
+                <button class="planet planet3 pos3" 
+                        tabindex="0" 
+                        aria-label="HTML - The foundation of web pages. Click for more information">
+                    <span>HTML</span>
+                </button>
+                
+                <button class="planet planet4 pos4" 
+                        tabindex="0" 
+                        aria-label="C++ - Powerful language for systems and game programming. Click for more information">
+                    <span>C++</span>
+                </button>
+                
+                <button class="planet planet5 pos5" 
+                        tabindex="0" 
+                        aria-label="Java - Widely used in enterprise apps and Android. Click for more information">
+                    <span>Java</span>
+                </button>
+                
+                <button class="planet planet6 pos6" 
+                        tabindex="0" 
+                        aria-label="CSS - Styles and layouts for web pages. Click for more information">
+                    <span>CSS</span>
+                </button>
+                
+                <button class="planet planet7 pos7" 
+                        tabindex="0" 
+                        aria-label="Go - Efficient language for cloud and backend. Click for more information">
+                    <span>Go</span>
+                </button>
+                
+                <button class="planet planet8 pos8" 
+                        tabindex="0" 
+                        aria-label="Rust - Safe and fast, great for systems. Click for more information">
+                    <span>Rust</span>
+                </button>
+            </section>
+        </main>
+
+        <!-- User Guide Footer -->
+        <footer role="contentinfo">
+            <div class="container">
+                <h2 class="text-center accent">🌌 CODE GALAXY - User Guide</h2>
+                
+                <section aria-labelledby="welcome-heading">
+                    <h3 id="welcome-heading" class="visually-hidden">Welcome</h3>
+                    <p>
+                        Welcome to Code Galaxy! An interactive platform for learning programming languages through solar system visualization.
+                    </p>
+                </section>
+
+                <section aria-labelledby="controls-heading">
+                    <h3 id="controls-heading" class="accent">🎮 Controls</h3>
+                    
+                    <h4>Mouse</h4>
+                    <ul>
+                        <li><strong>Click on planet</strong> – Open programming language information</li>
+                        <li><strong>Hover over planet</strong> – Planet scales up (hover effect)</li>
+                        <li><strong>Click outside popup</strong> – Close popup window</li>
+                    </ul>
+                    
+                    <h4>Keyboard</h4>
+                    <ul>
+                        <li><strong>← Left Arrow</strong> – Select previous planet</li>
+                        <li><strong>→ Right Arrow</strong> – Select next planet</li>
+                        <li><strong>Enter / Space</strong> – Open information for selected planet</li>
+                        <li><strong>Escape</strong> – Close modal window</li>
+                        <li><strong>A</strong> – Rotate solar system left by 15°</li>
+                        <li><strong>D</strong> – Rotate solar system right by 15°</li>
+                        <li><strong>Tab</strong> – Navigate between interactive elements</li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="planets-heading">
+                    <h3 id="planets-heading" class="accent">🌍 Planets (Programming Languages)</h3>
+                    <p>Each planet represents a programming language:</p>
+                    
+                    <dl>
+                        <dt>🔵 JavaScript</dt>
+                        <dd>Web development language for interactive sites</dd>
+                        
+                        <dt>🟡 Python</dt>
+                        <dd>Popular for AI, data science, and scripting</dd>
+                        
+                        <dt>🔴 HTML</dt>
+                        <dd>Foundation of web pages</dd>
+                        
+                        <dt>🔷 C++</dt>
+                        <dd>Powerful for systems and games</dd>
+                        
+                        <dt>🟤 Java</dt>
+                        <dd>For enterprise applications and Android</dd>
+                        
+                        <dt>🟣 CSS</dt>
+                        <dd>Styles and layouts for web pages</dd>
+                        
+                        <dt>🔷 Go</dt>
+                        <dd>Efficient for cloud and backend</dd>
+                        
+                        <dt>🟫 Rust</dt>
+                        <dd>Safe and fast for systems</dd>
+                    </dl>
+                </section>
+
+                <section aria-labelledby="features-heading">
+                    <h3 id="features-heading" class="accent">✨ Interactive Features</h3>
+                    
+                    <ol>
+                        <li>
+                            <strong>Modal Window</strong> – Opens with detailed information about each language
+                        </li>
+                        <li>
+                            <strong>Popup Tooltips</strong> – Compact information appears near your cursor
+                        </li>
+                        <li>
+                            <strong>Animations</strong> – Planets rotate at different speeds, creating a dynamic universe
+                        </li>
+                    </ol>
+                </section>
+
+                <section aria-labelledby="tips-heading">
+                    <h3 id="tips-heading" class="accent">🎯 Usage Tips</h3>
+                    
+                    <h4>For Beginners</h4>
+                    <ul>
+                        <li>Hover over planets to see their names</li>
+                        <li>Click to learn more about each language</li>
+                        <li>Use A/D keys to rotate and explore all planets</li>
+                    </ul>
+                    
+                    <h4>For Advanced Users</h4>
+                    <ul>
+                        <li>Use arrow keys + Enter for quick navigation without mouse</li>
+                        <li>Press Escape to quickly close windows</li>
+                        <li>Rotate with A/D for better overview</li>
+                    </ul>
+                </section>
+
+                <div class="text-center" style="margin-top: 3rem; padding: 2rem; font-size: 1.5rem;">
+                    <p>
+                        <strong>Happy learning in CODE GALAXY! 🚀✨</strong>
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 1rem; opacity: 0.8;">
+                        &copy; 2025 Code Galaxy. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading indicator (optional) -->
+    <noscript>
+        <div style="position: fixed; top: 0; left: 0; right: 0; background: #ffc107; color: #000; padding: 1rem; text-align: center; z-index: 99999;">
+            <strong>JavaScript is disabled.</strong> This interactive experience requires JavaScript to be enabled in your browser.
+        </div>
+    </noscript>
+
+</body>
+</html>
