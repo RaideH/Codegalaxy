@@ -13,9 +13,9 @@ const CONFIG = {
     // EmailJS - БЕСПЛАТНЫЙ сервис для отправки email
     // Настройте domain restrictions на emailjs.com!
     emailjs: {
-        publicKey: 'NpessLefRCM9SFBBM',
-        serviceID: 'service_rm0m2od',
-        templateID: 'template_gvlx7lg',
+        publicKey: 'publicKey',
+        serviceID: 'serviceID',
+        templateID: 'templateID',
         enabled: true
     },
     
@@ -23,9 +23,9 @@ const CONFIG = {
     // Настройте HTTP referrer restrictions в Google Cloud Console!
     gemini: {
         // Замените на ваш ключ или оставьте пустым для отключения AI
-        apiKey: 'AIzaSyCHUL_A6o_qcAsPOhsxaecdC1rz5Wni5MA', // Получите на: https://makersuite.google.com/app/apikey
+        apiKey: 'AIzaSyCHUL_A6o_qcAsPOhsxaecdC1rz5Wni5M', // Получите на: https://makersuite.google.com/app/apikey
         apiUrl: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',
-        enabled: false // Включится автоматически при наличии ключа
+        enabled: true // Включится автоматически при наличии ключа
     },
     
     // Local storage для сохранения данных пользователя
