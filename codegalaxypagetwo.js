@@ -1,41 +1,28 @@
-/**
- * Code Galaxy - Frontend-Only Solution
- * Optimized for projects WITHOUT backend
- * 
- * ВАЖНО: API ключи в frontend - это компромисс безопасности.
- * Используйте domain restrictions в настройках API.
- */
 
-// =========================================
-// CONFIGURATION - Frontend Only
-// =========================================
 const CONFIG = {
-    // EmailJS - БЕСПЛАТНЫЙ сервис для отправки email
-    // Настройте domain restrictions на emailjs.com!
+    
     emailjs: {
-        publicKey: 'publicKey',
-        serviceID: 'serviceID',
-        templateID: 'templateID',
+        publicKey: process.env.publicKey,
+        serviceID:  process.env.serviceID,
+        templateID:  process.env.templateID,
         enabled: true
     },
     
-    // Gemini AI - Добавьте свой ключ
-    // Настройте HTTP referrer restrictions в Google Cloud Console!
+   
     gemini: {
-        // Замените на ваш ключ или оставьте пустым для отключения AI
-        apiKey: 'AIzaSyCHUL_A6o_qcAsPOhsxaecdC1rz5Wni5M', // Получите на: https://makersuite.google.com/app/apikey
+        apiKey: 'AIzaSyCHUL_A6o_qcAsPOhsxaecdC1rz5Wni5M', 
         apiUrl: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',
-        enabled: true // Включится автоматически при наличии ключа
+        enabled: true 
     },
     
-    // Local storage для сохранения данных пользователя
+  
     storage: {
         userPrefix: 'cg_user_',
         settingsKey: 'cg_settings'
     }
 };
 
-// Auto-detect API availability
+
 CONFIG.gemini.enabled = CONFIG.gemini.apiKey.length > 0;
 
 // =========================================
